@@ -1,0 +1,51 @@
+---
+interfaces:
+  logical:
+    - name: loopback1
+      ip: "1.1.1.1"
+  physical:
+    - name: eth1
+      ip: "2.2.2.2"
+    - name: eth2
+      ip: "3.3.3.3"
+    - name: eth3
+      ip: "4.4.4.4"
+dnsdomain: test.com
+snmp:
+  users:
+    - testuser1
+    - testuser2
+    - testuser3
+  location: testsnmplocation
+priv_auth_users:
+  - privileged_user_1
+  - privileged_user_2
+vlans:
+  - name: prod1
+    number: 10
+  - name: prod2
+    number: 20
+  - name: prod3
+    number: 30
+vrfs:
+  - name: vrf1
+  - name: vrf2
+  - name: vrf3
+prefix_lists:
+  - name: test_prefix_1
+    seq: 10
+    permit_deny: permit
+    prefix: 10.0.0.0
+    mask: 24
+    le_ge: le
+    le_ge_mask: 32
+  - name: test_prefix_1
+    seq: 20
+    permit_deny: permit
+    prefix: 10.0.1.0
+    mask: 24
+    le_ge: 
+    le_ge_mask: 
+route_map:
+  - name: testroutemap
+    prefix_list: test_prefix_1
