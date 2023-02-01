@@ -1,0 +1,13 @@
+name: ceostopo
+
+topology:
+  nodes:
+    ceos1:
+      kind: ceos
+      image: ceosimage
+    ceos2:
+      kind: ceos
+      image: ceosimage
+
+  links:
+    - endpoints: ["ceos1:eth1", "ceos2:eth1"]

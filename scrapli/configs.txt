@@ -1,0 +1,6 @@
+configure
+interface loopback0
+    description exampleloopback1
+    ip address 1.1.1.1 255.255.255.255
+ip prefix-list testprefixlist
+    seq 10 permit 0.0.0.0/0

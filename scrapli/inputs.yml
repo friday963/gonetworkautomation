@@ -1,0 +1,17 @@
+---
+
+pre_maintenance:
+  - show ip interface brief
+  - show interfaces description
+  - show lldp neighbors
+  - show ip prefix-list
+
+maintenance:
+  - "configs.txt"
+
+post_maintenance:
+  - show ip interface brief
+  - show interface description
+  - show lldp neighbors
+  - show ip prefix-list
+  
